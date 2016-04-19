@@ -1,0 +1,23 @@
+---
+
+builds:
+  docker_image_name: sergey/hello-world:latest
+
+outputs:
+  - type: s3
+    bucket: some-random-bucket-1234567890
+    key: sergey.hello-world.latest.tar.gz
+    iam_role: arn:aws:iam::703587889398:role/test-role-TestRole-9FEQDNJY2ULH
+
+  - type: ecr
+    image: sergey/hello-world
+    url: https://703587889398.dkr.ecr.us-east-1.amazonaws.com
+
+  - type: kube
+    #user: flci::kube_user
+    #token: flci::kube_token
+    #client_certificate: flci::kube_client_certificate
+    #server: flci::kube_server
+    kube_config_path: ~/.kube/config
+    helm_template: webapp
+    helm_repo: https://github.com/SergeyDo/charts.git
