@@ -13,11 +13,11 @@ outputs:
     image: sergey/hello-world:v1
     url: https://369396668040.dkr.ecr.us-east-1.amazonaws.com
 
-  #- type: kube
-  #  #user: flci::kube_user
-  #  #token: flci::kube_token
-  #  #client_certificate: flci::kube_client_certificate
-  #  #server: flci::kube_server
-  #  kube_config_path: ~/.kube/config
-  #  helm_template: webapp
-  #  helm_repo: https://github.com/SergeyDo/charts.git
+  - type: kube
+    #user: flci::kube_user
+    #token: flci::kube_token
+    #client_certificate: flci::kube_client_certificate
+    #server: flci::kube_server
+    kube_config_path: ~/.kube/config
+    helm_template: webapp
+    helm_repo: https://github.com/SergeyDo/charts.git
