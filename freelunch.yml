@@ -1,7 +1,7 @@
 ---
 
 builds:
-  docker_image_name: sergey/hello-world:v1
+  docker_image_name: sergey/hello-world:latest
 
 outputs:
   #- type: s3
@@ -10,7 +10,7 @@ outputs:
   #  iam_role: arn:aws:iam::369396668040:role/test-role-TestRole-QLN0WTCNV3HM
 
   - type: ecr
-    image: sergey/hello-world:v1
+    image: sergey/hello-world:latest
     registry: 369396668040.dkr.ecr.us-east-1.amazonaws.com
     repository: hello-world
 
