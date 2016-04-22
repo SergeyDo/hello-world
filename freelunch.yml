@@ -22,4 +22,4 @@ outputs:
     kube_config_path: ~/.kube/config
     helm_template: SergeyDo/webapp
     helm_repo: https://github.com/SergeyDo/charts.git
-    webapp_image: 369396668040.dkr.ecr.us-east-1.amazonaws.com/hello-world
+    webapp_image: 369396668040.dkr.ecr.us-east-1.amazonaws.com/hello-world:latest
