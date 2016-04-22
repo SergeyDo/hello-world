@@ -12,7 +12,7 @@ outputs:
   - type: ecr
     image: sergey/hello-world:v1
     registry: 369396668040.dkr.ecr.us-east-1.amazonaws.com
-    repository: hello-world:latest
+    repository: hello-world
 
   - type: kube
     #user: flci::kube_user
