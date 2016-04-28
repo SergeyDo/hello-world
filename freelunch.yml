@@ -14,4 +14,4 @@ outputs:
     helm_template: webapp
     helm_repo: https://github.com/SergeyDo/charts.git
     webapp_image: 703587889398.dkr.ecr.us-east-1.amazonaws.com/hello-world
-    webapp_version: v1
+    webapp_version: v2
