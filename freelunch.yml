@@ -1,25 +1,19 @@
 ---
 
 builds:
-  docker_image_name: sergey/hello-world:v1
+  docker_image_name: FreeLunchCI/hello-world:latest
 
 outputs:
-  #- type: s3
-  #  bucket: some-random-bucket
-  #  key: sergey.hello-world.v1.tar.gz
-  #  iam_role: arn:aws:iam::369396668040:role/test-role-TestRole-QLN0WTCNV3HM
-
   - type: ecr
-    image: sergey/hello-world:v1
-    registry: 369396668040.dkr.ecr.us-east-1.amazonaws.com
-    repository: hello-world:latest
+    image: FreeLunchCI/hello-world:latest
+    registry: 703587889398.dkr.ecr.us-east-1.amazonaws.com
+    repository: hello-world
 
   - type: kube
-    #user: flci::kube_user
-    #token: flci::kube_token
-    #client_certificate: flci::kube_client_certificate
-    #server: flci::kube_server
-    kube_config_path: ~/.kube/config
-    helm_template: SergeyDo/webapp
-    helm_repo: https://github.com/SergeyDo/charts.git
-    webapp_image: 369396668040.dkr.ecr.us-east-1.amazonaws.com/hello-world:latest
+    user: flci::kube_user
+    token: flci::kube_token
+    client_certificate: flci::kube_client_certificate
+    server: flci::kube_server
+    kube_dir: k8s
+    webapp_image: 703587889398.dkr.ecr.us-east-1.amazonaws.com/hello-world:latest
+    webapp_version: v1
