@@ -3,8 +3,7 @@ kind: Service
 metadata:
   name: webapp
   labels:
-    tier: frontend
-    heritage: helm
+    app: webapp
 spec:
   type: LoadBalancer
   ports:
@@ -15,4 +14,4 @@ spec:
     port: 443
     targetPort: https
   selector:
-    tier: frontend
+    app: webapp
