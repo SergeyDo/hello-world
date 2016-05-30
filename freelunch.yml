@@ -1,22 +1,19 @@
 ---
 
 builds:
-  docker_image_name: FreeLunchCI/hello-world:v2
+  docker_image_name: FreeLunchCI/hello-world:green
 
 outputs:
   - type: ecr
-    image: FreeLunchCI/hello-world:v2
+    image: FreeLunchCI/hello-world:green
     registry: 703587889398.dkr.ecr.us-east-1.amazonaws.com
-    repository: hello-world:v2
+    repository: hello-world:green
 
   - type: kube
     user: flci::kube_user
     token: flci::kube_token
     client_certificate: flci::kube_client_certificate
     server: flci::kube_server
-    #kube_config_path: ~/.kube/config 
     kube_selector: app=webapp
     kube_rc_path: k8s/webapp-rc.yml
     kube_dir: k8s
-    #webapp_image: 703587889398.dkr.ecr.us-east-1.amazonaws.com/hello-world:v2
-    #webapp_version: v1
