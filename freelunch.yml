@@ -1,13 +1,13 @@
 ---
 
 builds:
-  docker_image_name: FreeLunchCI/hello-world:blue
+  docker_image_name: FreeLunchCI/hello-world:green
 
 outputs:
   - type: ecr
-    image: FreeLunchCI/hello-world:blue
+    image: FreeLunchCI/hello-world:green
     registry: 703587889398.dkr.ecr.us-east-1.amazonaws.com
-    repository: hello-world:blue
+    repository: hello-world:green
 
   - type: kube
     user: flci::kube_user
