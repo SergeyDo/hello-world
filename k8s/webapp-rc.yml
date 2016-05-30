@@ -21,7 +21,7 @@ spec:
       containers:
       - name: webapp-v1
         imagePullPolicy: Always
-        image: 703587889398.dkr.ecr.us-east-1.amazonaws.com/hello-world:latest
+        image: 703587889398.dkr.ecr.us-east-1.amazonaws.com/hello-world:v1
         ports:
         - name: http
           containerPort: 80

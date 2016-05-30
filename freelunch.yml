@@ -1,11 +1,11 @@
 ---
 
 builds:
-  docker_image_name: FreeLunchCI/hello-world:latest
+  docker_image_name: FreeLunchCI/hello-world:v1
 
 outputs:
   - type: ecr
-    image: FreeLunchCI/hello-world:latest
+    image: FreeLunchCI/hello-world:v1
     registry: 703587889398.dkr.ecr.us-east-1.amazonaws.com
     repository: hello-world
 
@@ -15,5 +15,5 @@ outputs:
     client_certificate: flci::kube_client_certificate
     server: flci::kube_server
     kube_dir: k8s
-    webapp_image: 703587889398.dkr.ecr.us-east-1.amazonaws.com/hello-world:latest
+    webapp_image: 703587889398.dkr.ecr.us-east-1.amazonaws.com/hello-world:v1
     webapp_version: v1
